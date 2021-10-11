@@ -19,4 +19,11 @@ def create_dir(dirs_paths:list)-> None:
 def save_df_local(data , storage_path , indexing = False):
     data.to_csv(storage_path , index=indexing)
     print(f"data is saved at path {storage_path}")
+
+
+
+def save_reports(report: dict, report_path: str, indentation=4):
+    with open(report_path, "w") as f:
+        json.dump(report, f, indent=indentation)
+    print(f"reports are saved at {report_path}")
     
