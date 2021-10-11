@@ -1,0 +1,8 @@
+dvc  # use python version 3.7 ( otherwise it'll give you an error ) 
+pandas
+scikit-learn
+
+#local packages 
+# e. means all the local packages 
+
+-e .
