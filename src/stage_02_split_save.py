@@ -38,16 +38,7 @@ def split_and_save(config_path , params_path ):
 
     print(train_path , test_path)
 
-    
-    
-
-
-
-
-
-
-    
- 
+  
 
 
 if __name__ == "__main__":  
