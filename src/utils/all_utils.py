@@ -14,3 +14,9 @@ def create_dir(dirs_paths:list)-> None:
     for dir_path in dirs_paths:
         if not os.path.isdir(dir_path):
             os.makedirs(dir_path , exist_ok= True)  
+
+
+def save_df_local(data , storage_path , indexing = False):
+    data.to_csv(storage_path , index=indexing)
+    print(f"data is saved at path {storage_path}")
+    
