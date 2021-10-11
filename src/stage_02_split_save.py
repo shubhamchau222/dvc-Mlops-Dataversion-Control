@@ -5,11 +5,8 @@ import os
 from sklearn.model_selection import train_test_split 
 
 
-def split_and_save(config_path , params_path ):
-    ''' Method : split_and_save
-        task : split the data and store at given path  
+def split_and_save(config_path , params_path):
     
-    '''
     config= read_yaml(config_path)
     params= read_yaml(params_path)
     
@@ -37,6 +34,7 @@ def split_and_save(config_path , params_path ):
     save_df_local(data=test_data , storage_path=test_path , indexing=False)
 
     print(train_path , test_path)
+    # print(train_data.head())
 
   
 
@@ -44,9 +42,9 @@ def split_and_save(config_path , params_path ):
 if __name__ == "__main__":  
     args = argparse.ArgumentParser()
     args.add_argument("--config" ,"-c" , default="config/config.yaml" )
-    args.add_argument("--params" ,"-p" , default="./params.yaml" )
+    args.add_argument("--params", "-p", default="params.yaml")
     parsed_args = args.parse_args()
-    # print(parsed_args)
+    print(parsed_args)
     split_and_save(config_path =parsed_args.config , params_path= parsed_args.params)
     
    

@@ -13,7 +13,7 @@ setup(
     url="https://github.com/shubhamchau222/dvc-MLusecase-mlops",
     author_email="shubhamchau78@gmail.com",
     packages=["src"],
-    python_requires=">=3.6",
+    python_requires=">=3.7",
     install_requires=[
         'dvc',
         'pandas',
